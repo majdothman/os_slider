@@ -148,4 +148,13 @@ class SliderController extends AbstractPlugin
 
         return $data;
     }
+    /**
+     * @return  array
+     */
+    protected function getData()
+    {
+        return [
+
+        ];
+    }
 }
