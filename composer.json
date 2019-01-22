@@ -1,0 +1,15 @@
+{
+  "name": "OTHMAN/os_slider",
+  "type": "typo3-cms-extension",
+  "description": " Slider with bootstrap 4 ",
+  "license": "proprietary",
+  "replace": {
+    "os_slider": "self.version",
+    "os/slider": "self.version"
+  },
+  "autoload": {
+    "psr-4": {
+      "OTHMAN\\OsSlider\\": "Classes/"
+    }
+  }
+}

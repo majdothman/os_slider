@@ -1,0 +1,2 @@
+<INCLUDE_TYPOSCRIPT: source="DIR: EXT:os_slider/Configuration/TypoScript/Library/" extensions="ts">
+<INCLUDE_TYPOSCRIPT: source="DIR: EXT:os_slider/Configuration/TypoScript/Plugins/" extensions="ts">

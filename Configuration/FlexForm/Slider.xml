@@ -1,0 +1,102 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>sheet Title</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+
+                    <height>
+                        <TCEforms>
+                            <label>Slider Height</label>
+                            <config>
+                                <type>input</type>
+                                <default>300</default>
+                                <eval>int</eval>
+
+                            </config>
+                        </TCEforms>
+                    </height>
+
+                    <image>
+                        <TCEforms>
+                            <label>Bilder</label>
+                            <config>
+                                <type>inline</type>
+                                <foreign_field>uid_foreign</foreign_field>
+                                <foreign_label>uid_local</foreign_label>
+                                <foreign_match_fields>
+                                    <fieldname>image</fieldname> <!-- Replace "fal" with name of variable of this field (e.g. images)! -->
+                                </foreign_match_fields>
+                                <foreign_selector>uid_local</foreign_selector>
+                                <foreign_selector_fieldTcaOverride>
+                                    <config>
+                                        <appearance>
+                                            <elementBrowserAllowed>gif,jpg,jpeg</elementBrowserAllowed>
+                                            <elementBrowserType>file</elementBrowserType>
+                                        </appearance>
+                                    </config>
+                                </foreign_selector_fieldTcaOverride>
+                                <foreign_sortby>sorting_foreign</foreign_sortby>
+                                <foreign_table>sys_file_reference</foreign_table>
+                                <foreign_table_field>tablenames</foreign_table_field>
+                                <foreign_types type="array">
+                                    <numIndex index="2">
+                                        <showitem>--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette</showitem>
+                                    </numIndex>
+                                </foreign_types>
+
+                                <filter type="array">
+                                    <numIndex index="0">
+                                        <parameters>
+                                            <allowedFileExtensions>gif,jpg,jpeg</allowedFileExtensions>
+                                            <disallowedFileExtensions></disallowedFileExtensions>
+                                        </parameters>
+                                        <userFunc>TYPO3\CMS\Core\Resource\Filter\FileExtensionFilter->filterInlineChildren</userFunc>
+                                    </numIndex>
+                                </filter>
+
+                                <minitems>0</minitems>
+                                <maxitems>99</maxitems>
+
+                                <appearance>
+                                    <useSortable>1</useSortable>
+                                    <headerThumbnail>
+                                        <field>uid_local</field>
+                                        <width>45c</width>
+                                        <height>45</height>
+                                    </headerThumbnail>
+
+                                    <showPossibleLocalizationRecords>0</showPossibleLocalizationRecords>
+                                    <showRemovedLocalizationRecords>0</showRemovedLocalizationRecords>
+                                    <showSynchronizationLink>0</showSynchronizationLink>
+                                    <useSortable>1</useSortable>
+                                    <enabledControls>
+                                        <delete>1</delete>
+                                        <dragdrop>1</dragdrop>
+                                        <hide>1</hide>
+                                        <info>1</info>
+                                        <localize>1</localize>
+                                        <new>0</new>
+                                        <sort>1</sort>
+                                    </enabledControls>
+                                    <createNewRelationLinkTitle>LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference</createNewRelationLinkTitle>
+                                </appearance>
+
+                                <behaviour>
+                                    <localizationMode>select</localizationMode>
+                                    <localizeChildrenAtParentLocalization>1</localizeChildrenAtParentLocalization>
+                                </behaviour>
+                            </config>
+                        </TCEforms>
+                    </image>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

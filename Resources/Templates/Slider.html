@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-12">
+        <div id="carouselSlider{cObj.uid}" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <f:for each="{slider.image.0}" as="item" iteration="iterator">
+                    <li data-target="#carouselSlider{cObj.uid}" data-slide-to="{iterator.cycle}"
+                        class="{f:if(condition:'{iterator.index} == 0' ,then:'active',else:'')}"></li>
+                </f:for>
+            </ol>
+            <div class="carousel-inner"
+                 style="{f:if(condition:'{slider.height} > 0',then:'{slider.height}px',else: '350px')}">
+                <f:for each="{slider.image.0}" as="item" iteration="iterator">
+                    <div class="carousel-item {f:if(condition:'{iterator.index} == 0' ,then:'active',else:'')}">
+                        <f:image src="{item.filepath}" alt="{item.alternative}" class="d-block w-100" width="auto"
+                                 height="{f:if(condition:'{slider.height} > 0',then:'{slider.height}px',else: '350px')}"/>
+                    </div>
+                </f:for>
+            </div>
+            <a class="carousel-control-prev" href="#carouselSlider{cObj.uid}" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselSlider{cObj.uid}" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
