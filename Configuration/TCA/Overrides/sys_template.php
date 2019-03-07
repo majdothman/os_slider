@@ -11,6 +11,13 @@ call_user_func(
             'Configuration/TypoScript',
             'Othman Slider'
         );
+
+        // Include bootstrap
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            $extKey,
+            'Configuration/TypoScript/Bootstrap',
+            'Othman Slider include Bootstrap 4 (optional)'
+        );
     },
     'os_slider'
 );

@@ -1,0 +1,10 @@
+page{
+    includeCSS {
+        os-slider-css1 = EXT:os_slider/Resources/Public/Css/bootstrap.min.css
+    }
+    includeJSFooter {
+        os-slider-js1 = EXT:os_slider/Resources/Public/JavaScript/jquery-3.3.1.slim.min.js
+        os-slider-js2 = EXT:os_slider/Resources/Public/JavaScript/popper.min.js
+        os-slider-js3 = EXT:os_slider/Resources/Public/JavaScript/bootstrap.min.js
+    }
+}
